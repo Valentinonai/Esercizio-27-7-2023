@@ -30,15 +30,15 @@ main {
 }
 .parola1 {
   position: absolute;
-  animation: anim 5s both;
+  animation: anim 15s infinite both;
 }
 .parola2 {
   position: absolute;
-  animation: anim 5s 5s both;
+  animation: anim 15s 5s infinite both;
 }
 .parola3 {
   position: absolute;
-  animation: anim 5s 10s both;
+  animation: anim 15s 10s infinite both;
 }
 
 @keyframes anim {
@@ -46,13 +46,13 @@ main {
     opacity: 0;
     transform: translateY(-20px);
   }
-  40% {
+  33% {
     opacity: 100%;
     transform: translateY(0px);
   }
-  60% {
-    opacity: 100%;
-    transform: translateY(0px);
+  50% {
+    opacity: 0%;
+    transform: translateY(20px);
   }
   100% {
     opacity: 0;
