@@ -29,6 +29,7 @@ body {
   padding-inline-start: 2%;
   box-shadow: 4px 4px 5px rgb(0, 0, 0);
   transition: transform 2s;
+  opacity: 0;
 }
 
 .postit h1 {
@@ -39,47 +40,83 @@ body {
   font-weight: 300;
   margin-top: 0.2em;
 }
-
-.giallo {
+.postit:first-of-type {
   background-color: #fdfbc7;
   rotate: -5deg;
-  animation: anim1 2s forwards;
+  animation: anim1 0.5s forwards;
+}
+.postit:nth-of-type(4) {
+  background-color: #fdfbc7;
+  rotate: -5deg;
+  animation: anim1 0.5s 1.5s forwards;
+}
+.postit:nth-of-type(7) {
+  background-color: #fdfbc7;
+  rotate: -5deg;
+  opacity: 0;
+  animation: anim1 0.5s 3s forwards;
 }
 
-.verde {
+.postit:nth-of-type(2) {
   background-color: #bdfcc9;
   rotate: 8deg;
-  animation: anim2 2s forwards;
+  opacity: 0;
+  animation: anim2 0.5s 0.5s forwards;
 }
-.viola {
+.postit:nth-of-type(5) {
+  background-color: #bdfcc9;
+  rotate: 8deg;
+  opacity: 0;
+  animation: anim2 0.5s 2s forwards;
+}
+.postit:last-of-type {
+  background-color: #bdfcc9;
+  rotate: 8deg;
+  opacity: 0;
+  animation: anim2 0.5s 3.5s forwards;
+}
+.postit:nth-of-type(3) {
   background-color: #babdea;
   rotate: -10deg;
-  animation: anim3 2s forwards;
+  opacity: 0;
+  animation: anim3 0.5s 1s forwards;
+}
+.postit:nth-of-type(6) {
+  background-color: #babdea;
+  rotate: -10deg;
+  opacity: 0;
+  animation: anim3 0.5s 2.5s forwards;
 }
 @keyframes anim1 {
   0% {
+    opacity: 20%;
     scale: 2;
     rotate: 0deg;
   }
   100% {
+    opacity: 100%;
     rotate: -5deg;
   }
 }
 @keyframes anim2 {
   0% {
+    opacity: 20%;
     scale: 2;
     rotate: 0deg;
   }
   100% {
+    opacity: 100%;
     rotate: 8deg;
   }
 }
 @keyframes anim3 {
   0% {
+    opacity: 20%;
     scale: 2;
     rotate: 0deg;
   }
   100% {
+    opacity: 100%;
     rotate: -10deg;
   }
 }
