@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+body {
+  font-family: "Kalam", cursive;
+}
+* {
+  box-sizing: border-box;
+}
+
+#lavagna {
+  padding-block: 20px;
+  padding-inline: 60px;
+  min-height: 100vh;
+  background-color: #5b5b5b;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  row-gap: 5em;
+}
+
+.postit {
+  min-width: 21%;
+  min-height: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-inline-start: 4em;
+  box-shadow: 4px 4px 5px rgb(0, 0, 0);
+  transition: all 2s;
+}
+.postit h1 {
+  font-size: 3em;
+}
+.postit h3 {
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 0.2em;
+}
+
+.giallo {
+  background-color: #fdfbc7;
+  rotate: -5deg;
+}
+
+.verde {
+  background-color: #bdfcc9;
+  rotate: 8deg;
+}
+.viola {
+  background-color: #babdea;
+  rotate: -10deg;
+}
+
+.postit ::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#e6646500 70%, #0000002e);
+}
+.postit:hover {
+  scale: 1.5;
+  z-index: 3;
+}
