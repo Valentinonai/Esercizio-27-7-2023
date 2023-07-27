@@ -28,8 +28,9 @@ body {
   align-items: flex-start;
   padding-inline-start: 4em;
   box-shadow: 4px 4px 5px rgb(0, 0, 0);
-  transition: all 2s;
+  transition: transform 2s;
 }
+
 .postit h1 {
   font-size: 3em;
 }
@@ -42,17 +43,46 @@ body {
 .giallo {
   background-color: #fdfbc7;
   rotate: -5deg;
+  animation: anim1 2s forwards;
 }
 
 .verde {
   background-color: #bdfcc9;
   rotate: 8deg;
+  animation: anim2 2s forwards;
 }
 .viola {
   background-color: #babdea;
   rotate: -10deg;
+  animation: anim3 2s forwards;
 }
-
+@keyframes anim1 {
+  0% {
+    scale: 2;
+    rotate: 0deg;
+  }
+  100% {
+    rotate: -5deg;
+  }
+}
+@keyframes anim2 {
+  0% {
+    scale: 2;
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 8deg;
+  }
+}
+@keyframes anim3 {
+  0% {
+    scale: 2;
+    rotate: 0deg;
+  }
+  100% {
+    rotate: -10deg;
+  }
+}
 .postit ::before {
   content: "";
   position: absolute;
@@ -60,6 +90,6 @@ body {
   background: linear-gradient(#e6646500 70%, #0000002e);
 }
 .postit:hover {
-  scale: 1.5;
+  transform: scale(1.5);
   z-index: 3;
 }
